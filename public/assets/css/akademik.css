@@ -1,0 +1,187 @@
+/* ==============================
+   📋 AKADEMIK PROGRAM STYLES - SIMPLE
+   ============================== */
+
+.program-section {
+    padding: 3rem 0;
+    margin: 2rem 0;
+}
+
+/* Program Item Container */
+.program-item {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.program-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Photo Section */
+.program-photo {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.program-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.program-item:hover .program-photo img {
+    transform: scale(1.05);
+}
+
+/* Program Info */
+.program-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.program-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.program-subtitle {
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+/* Detail Button */
+.btn-detail {
+    background: #c13333;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.btn-detail:hover {
+    background: #756b51;
+    transform: translateY(-2px);
+}
+
+.btn-detail i {
+    margin-right: 0.5rem;
+}
+
+/* Dropdown Detail */
+.program-detail {
+    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #ecf0f1;
+    animation: slideDown 0.3s ease;
+    text-align: left;
+    width: 100%;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.detail-content {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #c31a1a;
+}
+
+/* Tujuan Section */
+.tujuan, .sasaran {
+    margin-bottom: 1.5rem;
+}
+
+.tujuan h5, .sasaran h5 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tujuan h5 i, .sasaran h5 i {
+    color: #000000;
+    margin-right: 0.5rem;
+}
+
+.tujuan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tujuan li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.tujuan li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.sasaran p {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0;
+    color: #34495e;
+    border-left: 3px solid #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .program-section {
+        padding: 2rem 0;
+    }
+    
+    .program-photo {
+        height: 280px;
+    }
+    
+    .program-info {
+        padding: 1rem;
+    }
+    
+    .program-title {
+        font-size: 1.3rem;
+    }
+    
+    .detail-content {
+        padding: 1rem;
+    }
+}
